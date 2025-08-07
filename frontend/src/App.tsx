@@ -37,7 +37,7 @@ function App() {
 
   // Effect to fetch logged-in user
   useEffect(() => {
-    if(authFormView === 'none'){
+    
       async function fetchLoggedInUser() {
       try {
         const user = await getLoggedINUser();
@@ -46,11 +46,11 @@ function App() {
         console.log("user is logged in");
       } catch (error) {
         console.error(error);
-        // setAuthFormView("signup"); // Show login if not logged in
+        setAuthFormView("login"); // Show login if not logged in
       }
-    }
+      }
     fetchLoggedInUser();
-    }
+    
     
   }, [authFormView]);
 

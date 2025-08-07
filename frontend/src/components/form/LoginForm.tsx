@@ -23,7 +23,7 @@ export default function LoginForm({onLoginSuccessfull,onDismiss,onShowSignup,onS
 
             }catch(error){
                 alert(error);
-                console.error(error)
+                console.error('login erroe',error)
             }
            }
     
