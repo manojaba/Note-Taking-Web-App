@@ -68,6 +68,7 @@ export const createNotes: RequestHandler<unknown,unknown,NoteInput,unknown> = as
     const tags = req.body.tags;
     const archived = req.body.archived;
     const authenticatedUserId = req.session.userId;
+    console.log("UserId in session:", req.session.userId);
 
     try{
         assertIsDefined(authenticatedUserId)

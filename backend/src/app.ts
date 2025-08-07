@@ -29,8 +29,8 @@ import { requiresAuth } from './middleware/auth';
    saveUninitialized:false,
    cookie:{
       maxAge: 60* 60 * 1000,
-      sameSite:'lax',
-      secure:false,
+      sameSite:'none',
+      secure:true,
    },
    rolling:true,
    store:MongoStore.create({
