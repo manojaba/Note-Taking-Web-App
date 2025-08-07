@@ -14,7 +14,7 @@ async function fetchData (input:RequestInfo, init?:RequestInit){
 
 
 export async function getCors():Promise<string>{
-    const response = await fetchData('http://localhost:2500/test-cors',{
+    const response = await fetchData('https://note-taking-web-app-29w9.onrender.com/test-cors',{
         method:'GET',
         credentials:'include'
     })
@@ -24,7 +24,7 @@ export async function getCors():Promise<string>{
 
 
 export async function getLoggedINUser():Promise<User>{
-    const response = await fetchData('http://localhost:2500/api/user',{
+    const response = await fetchData('https://note-taking-web-app-29w9.onrender.com/api/user',{
         method:'GET',
         credentials:'include'
     })
@@ -37,7 +37,7 @@ export interface SignupCredentials {
 }
 
 export async function signup(credentials:SignupCredentials):Promise<User>{
-    const response = await fetchData('http://localhost:2500/api/user/signup',{
+    const response = await fetchData('https://note-taking-web-app-29w9.onrender.com/api/user/signup',{
         method:'POST',
         headers:{
             'Content-Type':'application/json'
@@ -55,7 +55,7 @@ export interface LoginCredentials {
 }
 
 export async function login(credentials:LoginCredentials):Promise<User>{
-    const response = await fetchData('http://localhost:2500/api/user/login',{
+    const response = await fetchData('https://note-taking-web-app-29w9.onrender.com/api/user/login',{
         method:'POST',
           headers:{
             'Content-Type':'application/json'
@@ -73,7 +73,7 @@ interface ChangePasswordBody{
 }
 
 export async function changePassword(passwords:ChangePasswordBody):Promise<any>{
-    const response = await fetchData('http://localhost:2500/api/user/change',{
+    const response = await fetchData('https://note-taking-web-app-29w9.onrender.com/api/user/change',{
         method:'POST',
         headers:{
             'Content-Type':'application/json'
@@ -85,14 +85,14 @@ export async function changePassword(passwords:ChangePasswordBody):Promise<any>{
 }
 
 export async function logout(){
-    await fetchData('http://localhost:2500/api/user/logout',{
+    await fetchData('https://note-taking-web-app-29w9.onrender.com/api/user/logout',{
         method:'POST',
         credentials:'include',
     })
 }
 
 export async function fetchNotes(): Promise<Note[]>  {
-    const response = await fetchData('http://localhost:2500/api/notes',{
+    const response = await fetchData('https://note-taking-web-app-29w9.onrender.com/api/notes',{
         method:'GET',
         headers:{
             "Accept":"application/json",
@@ -104,7 +104,7 @@ export async function fetchNotes(): Promise<Note[]>  {
 }
 
 export async function fetchArchived():Promise<Note[]> {
-    const response = await fetchData('http://localhost:2500/api/notes/archived',{
+    const response = await fetchData('https://note-taking-web-app-29w9.onrender.com/api/notes/archived',{
         method:'GET',
         headers:{
             "Accept":"application/json",
@@ -116,7 +116,7 @@ export async function fetchArchived():Promise<Note[]> {
 }
 
 export async function createNote(input:CreateNoteInput):Promise<Note>{
-    const response = await fetchData('http://localhost:2500/api/notes',{
+    const response = await fetchData('https://note-taking-web-app-29w9.onrender.com/api/notes',{
         method:'POST',
         headers:{
             "Content-type":"application/json",
@@ -129,7 +129,7 @@ export async function createNote(input:CreateNoteInput):Promise<Note>{
 }
 
 export async function updateNote(noteId:string, input:CreateNoteInput):Promise<Note>{
-    const response = await fetchData('http://localhost:2500/api/notes/'+noteId,{
+    const response = await fetchData('https://note-taking-web-app-29w9.onrender.com/api/notes/'+noteId,{
         method:'PATCH',
         headers:{
             "Content-type":"application/json",
@@ -142,7 +142,7 @@ export async function updateNote(noteId:string, input:CreateNoteInput):Promise<N
 }
 
 export async function deleteNote(noteId:string){
-    await fetchData('http://localhost:2500/api/notes/'+noteId,{
+    await fetchData('https://note-taking-web-app-29w9.onrender.com/api/notes/'+noteId,{
         method:'DELETE',
         credentials:'include',
         
