@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { logout } from "../network/notes.api";
+
 import FontToggle from "./settings/FontToggle";
 import ThemeToggle from "./settings/ThemeToggle";
 import { ChevronRight, Lock, LogOut, SunMedium, Type } from "lucide-react";
-import ForgotPassword from "./settings/ChangePassword";
+
 import ChangePassword from "./settings/ChangePassword";
 
 interface SettingsProps {

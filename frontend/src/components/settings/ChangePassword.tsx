@@ -1,5 +1,5 @@
 import { ChevronLeft, Eye, EyeOff } from "lucide-react";
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useForm } from "react-hook-form";
 import PrimaryButton from "../buttons/PrimaryButton";
 import { changePassword } from "../../network/notes.api";
@@ -41,7 +41,7 @@ function ChangePassword({onApplyChanges}:ChangePasswordInput) {
 
     try {
       const response = await changePassword(passwords);
-      console.log(response.message);
+      console.log(response.email);
       reset({
         oldPassword: "",
         newPassword: "",

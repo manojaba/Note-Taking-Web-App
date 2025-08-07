@@ -72,7 +72,7 @@ interface ChangePasswordBody{
     newPassword?:string;
 }
 
-export async function changePassword(passwords:ChangePasswordBody):Promise<any>{
+export async function changePassword(passwords:ChangePasswordBody):Promise<User>{
     const response = await fetchData('https://note-taking-web-app-29w9.onrender.com/api/user/change',{
         method:'POST',
         headers:{

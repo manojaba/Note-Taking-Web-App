@@ -12,7 +12,7 @@ interface LoginProps{
     onShowForgotPassword:() => void;
 }
 
-export default function LoginForm({onLoginSuccessfull,onDismiss,onShowSignup,onShowForgotPassword}:LoginProps){
+export default function LoginForm({onLoginSuccessfull,onShowSignup}:LoginProps){
            const{register,handleSubmit,formState:{errors,isSubmitting}} = useForm<SignupCredentials>();
            const[showPassword,setShowPassword] = useState(false);
 

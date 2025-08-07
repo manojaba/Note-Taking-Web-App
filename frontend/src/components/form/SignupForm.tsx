@@ -13,7 +13,7 @@ interface SignupProps {
 
 }
 
-export default function SignupForm({onDismiss,onSignupSuccessfull,onShowLogin}:SignupProps){
+export default function SignupForm({onSignupSuccessfull,onShowLogin}:SignupProps){
        const{register,handleSubmit,formState:{errors,isSubmitting}} = useForm<SignupCredentials>();
        const[showPassword,setShowPassword] = useState(false)
 

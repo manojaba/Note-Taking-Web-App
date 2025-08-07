@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
-import ForgotPasswordForm from "./components/form/ForgotPasswordForm";
+
 import LoginForm from "./components/form/LoginForm";
 
 import SignupForm from "./components/form/SignupForm";
@@ -15,7 +15,7 @@ import type { User } from "./types/user";
 import NavbarFinal from "./components/NavbarFinal";
 import NotesSection from "./components/NotesSection";
 import Settings from "./components/Settings";
-import { ArchiveRestore, ChevronRight, House, Search, Tag } from "lucide-react";
+import { ArchiveRestore, ChevronRight, House,  Tag } from "lucide-react";
 import Menubar from "./components/Menubar";
 
 type NoteView = "all" | "archived" | "settings" | "search" |'tags' | string;
@@ -448,11 +448,7 @@ function App() {
               onShowForgotPassword={() => setAuthFormView("forgotPassword")}
             ></LoginForm>
           )}
-          {authFormView === "forgotPassword" && (
-            <ForgotPasswordForm
-              onDismiss={() => setAuthFormView("login")}
-            ></ForgotPasswordForm>
-          )}
+        
         </div>
       )}
     </>

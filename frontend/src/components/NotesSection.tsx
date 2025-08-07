@@ -3,9 +3,9 @@ import NoteForm from "./form/NoteForm";
 import NoteThumbnail from "./noteThumbnail";
 import type { Note } from "../types/note";
 import PrimaryButton from "./buttons/PrimaryButton";
-import Menubar from "./Menubar";
+
 import { Plus, PlusIcon, Search } from "lucide-react";
-import NavbarFinal from "./NavbarFinal";
+
 
 type NoteView = "all" | "archived" |"settings"|"search"| string;
 
