@@ -19,15 +19,20 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./frontend # Specify the frontend directory
+        working-directory: ./frontend
+
+      # Add this step to grant execute permissions
+      - name: Make vite executable
+        run: chmod +x ./node_modules/.bin/vite
+        working-directory: ./frontend
 
       - name: Build frontend
         run: npm run build
-        working-directory: ./frontend # Specify the frontend directory
+        working-directory: ./frontend
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./frontend/dist # Specify the path to the dist folder
+          publish_dir: ./frontend/dist
           publish_branch: gh-pages
