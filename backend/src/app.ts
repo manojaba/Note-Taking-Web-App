@@ -20,7 +20,7 @@ import { requiresAuth } from './middleware/auth';
 //  app.get('/test-cors',(req:Request,res:Response) => {
 //    res.status(200).json({message:'CORS is working directly here!'});
 //  })
-
+app.set('trust proxy',1);
 
  app.use(morgan('dev'));
  app.use(session({
