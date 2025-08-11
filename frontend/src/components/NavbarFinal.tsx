@@ -29,7 +29,7 @@ function NavbarFinal({headingTag,onClicked,setSearchInput,setCurrentView,searchI
             
           }}></input>
         </div>
-        <Settings onClick={onClicked} className="w-[20px] h-[20px] text-f-neutral-500 dark:text-f-neutral-400"/>
+        <Settings onClick={onClicked} className="w-[20px] h-[20px] text-f-neutral-500 dark:text-f-neutral-400 cursor-pointer hover:text-f-blue-500"/>
         </div>
     </div>
   )

@@ -46,7 +46,7 @@ function App() {
         console.log("user is logged in");
       } catch (error) {
         console.error(error);
-        setAuthFormView("login"); // Show login if not logged in
+        // setAuthFormView("signup"); // Show login if not logged in
       }
       }
     fetchLoggedInUser();

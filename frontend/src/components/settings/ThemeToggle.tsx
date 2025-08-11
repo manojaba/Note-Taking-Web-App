@@ -3,9 +3,9 @@ import PrimaryButton from "../buttons/PrimaryButton";
 import { ChevronLeft } from "lucide-react";
 
 const colorThemes = [
-    {name:'Light Mode',description:'Pick a clean and classic light theme',value:"light",image:"/images/icon-sun.svg"},
-    {name:'Dark Mode',description:'Select a sleek and modern dark theme',value:'dark',image:"/images/icon-moon.svg"},
-    {name:'System',description:"Adapts to your device's theme",value:'system',image:"/images/icon-system-theme.svg"},
+    {name:'Light Mode',description:'Pick a clean and classic light theme',value:"light",image:"./images/icon-sun.svg"},
+    {name:'Dark Mode',description:'Select a sleek and modern dark theme',value:'dark',image:"./images/icon-moon.svg"},
+    {name:'System',description:"Adapts to your device's theme",value:'system',image:"./images/icon-system-theme.svg"},
 ];
 
 interface ThemeToggleProps {

@@ -3,9 +3,9 @@ import PrimaryButton from "../buttons/PrimaryButton";
 import { ChevronLeft } from "lucide-react";
 
 const fonts = [
-    {name:'Sans-serif',description:'Clean and modern,easy to read.',value:"var(--font-inter)",image:"/images/icon-font-sans-serif.svg"},
-    {name:'Serif',description:'Classic and elegant for a timeless feel.',value:'var(--font-noto-serif)',image:"/images/icon-font-serif.svg"},
-    {name:'Monospace',description:'Code-like,great for a technical vibe.',value:'var(--font-source-code-pro)',image:"/images/icon-font-monospace.svg"},
+    {name:'Sans-serif',description:'Clean and modern,easy to read.',value:"var(--font-inter)",image:"./images/icon-font-sans-serif.svg"},
+    {name:'Serif',description:'Classic and elegant for a timeless feel.',value:'var(--font-noto-serif)',image:"./images/icon-font-serif.svg"},
+    {name:'Monospace',description:'Code-like,great for a technical vibe.',value:'var(--font-source-code-pro)',image:"./images/icon-font-monospace.svg"},
 ];
 
 interface FontToggleProps{
